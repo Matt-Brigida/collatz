@@ -35,11 +35,11 @@ void collatz(mpz_t big_number, mpz_t return_value)
   
   if (mpz_even_p(big_number))
     {
-      mpz_cdiv_q(&return_value, big_number, two);
+      mpz_cdiv_q(return_value, big_number, two);
     }
   else
     {
-      mpz_mul_ui(&return_value, big_number, 3);
-      mpz_add_ui(&return_value, return_value, 1);
+      mpz_mul_ui(return_value, big_number, 3);
+      mpz_add_ui(return_value, return_value, 1);
     }
 }
