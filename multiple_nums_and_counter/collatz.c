@@ -33,18 +33,14 @@ void collatz(mpz_t big_number, int *counter)
       *counter = *counter + 1;
    if (mpz_even_p(big_number))
     {
-      /* void (*null_ptr)() = NULL; */
-      /* mpz_out_str(null_ptr,10, big_number); */
-      gmp_printf ("Collatz number %Zd\n", big_number);
+      /* gmp_printf ("Collatz number %Zd\n", big_number); */
 
       mpz_cdiv_q(big_number, big_number, two);
       collatz(big_number, counter);
     }
    else 
     {
-      /* void (*null_ptr)() = NULL; */
-      /* mpz_out_str(null_ptr,10, big_number); */
-      gmp_printf ("Collatz number %Zd\n", big_number);
+      /* gmp_printf ("Collatz number %Zd\n", big_number); */
 
       mpz_mul_ui(big_number, big_number, 3);
       mpz_add_ui(big_number, big_number, 1);
