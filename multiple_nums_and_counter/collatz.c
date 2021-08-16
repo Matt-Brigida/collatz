@@ -52,10 +52,10 @@ void collatz(mpz_t big_number, int *counter)
     }
     }
 }
-    
 
 
-/*** way to print big number
-  void (*null_ptr)() = NULL;
-  mpz_out_str(null_ptr,10, counter);
+
+
+/***
+https://stackoverflow.com/questions/46422668/in-c-language-can-i-access-local-variable-of-main-function-in-another-function
 ***/
